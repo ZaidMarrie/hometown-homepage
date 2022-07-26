@@ -5,4 +5,23 @@
 body {
 	margin: 0;
 	padding: 0;
+	text-align: center;
+}
+
+/* Utility Classes */
+.capitalize {
+	text-transform: capitalize;
+}
+
+.flex {
+	display: flex;
+}
+
+/* Card Styles */
+.card {
+	max-width: 215px;
+}
+
+.card__img {
+	border-radius: 50%;
 }
