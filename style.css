@@ -6,6 +6,12 @@ body {
 	margin: 0;
 	padding: 0;
 	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+img {
+	display: block;
+	max-width: 100%;
 }
 
 /* Utility Classes */
@@ -17,11 +23,81 @@ body {
 	display: flex;
 }
 
-/* Card Styles */
-.card {
-	max-width: 215px;
+/* Header Styles */
+.header {
+	color: #fff;
+	min-height: 343px;
+	background-size: cover;
+	background-position: center center;
+	background-image: url("images/torshov-image.png");
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
-.card__img {
+.title,
+.sub-title {
+	border-radius: 10px;
+}
+
+.title {
+	padding: 5px 12px;
+	background-color: #1d3557;
+	margin: 0 0 11px;
+}
+
+.sub-title {
+	font-size: 1.125rem;
+	font-weight: 700;
+	margin: 0 auto;
+	max-width: 412px;
+	padding: 5px 28px;
+	background-color: #457b9d;
+}
+
+/* Cards Section Styles */
+.cards-section {
+	padding: 58px 34px;
+	background-color: #f1faee;
+	justify-content: space-evenly;
+}
+.card {
+	max-width: 200px;
+}
+
+.card-title {
+	font-size: 1rem;
+}
+
+.card-img {
+	margin: 0 auto;
 	border-radius: 50%;
+}
+
+/* Guide Section Styles */
+.guide-section {
+	padding: 50px 0;
+}
+
+.guide-card {
+	margin: 0 auto;
+	padding: 23px 12px;
+	max-width: 400px;
+	border-radius: 10px;
+	background-color: #a8dadc;
+	justify-content: space-between;
+	box-shadow: 0px 6px 0px #1d3557;
+}
+
+.guide-card > * {
+	width: 100%;
+}
+
+.guide-card-body p {
+	font-style: italic;
+}
+
+.guide-card-body h2,
+.guide-card-body h3 {
+	color: #1d3557;
 }
