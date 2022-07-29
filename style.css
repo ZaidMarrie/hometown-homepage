@@ -9,6 +9,10 @@ body {
 	font-family: Arial, Helvetica, sans-serif;
 }
 
+section {
+	padding-block: 100px;
+}
+
 img {
 	display: block;
 	max-width: 100%;
@@ -21,83 +25,139 @@ img {
 
 .flex {
 	display: flex;
+	gap: 1rem;
+}
+
+.container {
+	width: min(100% - 2rem, 1200px);
+	margin-inline: auto;
 }
 
 /* Header Styles */
 .header {
 	color: #fff;
-	min-height: 343px;
+	min-height: 78vh;
+	padding: 50px 0;
 	background-size: cover;
 	background-position: center center;
-	background-image: url("images/torshov-image.png");
-	flex-direction: column;
+	background-image: url("images/joburg.jpg");
 	justify-content: center;
 	align-items: center;
+	position: relative;
+	isolation: isolate;
 }
 
-.title,
-.sub-title {
-	border-radius: 10px;
+.header::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background-color: hsl(200 95% 14% / 0.65);
+}
+
+.header-container {
+	max-width: 440px;
+	padding: 30px 25px;
+	background-color: hsl(0 0% 0% / 0.75);
+	z-index: 1;
 }
 
 .title {
-	padding: 5px 12px;
-	background-color: #1d3557;
-	margin: 0 0 11px;
+	font-size: 48px;
 }
 
-.sub-title {
+.subtitle {
 	font-size: 1.125rem;
-	font-weight: 700;
-	margin: 0 auto;
-	max-width: 412px;
-	padding: 5px 28px;
-	background-color: #457b9d;
 }
 
 /* Cards Section Styles */
-.cards-section {
-	padding: 58px 34px;
-	background-color: #f1faee;
-	justify-content: space-evenly;
+.top-sights-section .flex {
+	justify-content: space-between;
 }
+
 .card {
-	max-width: 200px;
+	max-width: 350px;
+	border-radius: 10px;
+	background-color: #fff3d6;
+	box-shadow: 0 3px 8px hsla(0, 0%, 0%, 0.15);
+	overflow: hidden;
+}
+
+.card-body {
+	padding: 25px 20px;
 }
 
 .card-title {
-	font-size: 1rem;
+	color: #023047;
+}
+
+.card-img-wrapper {
+	width: 100%;
+	height: 225px;
+	overflow: hidden;
 }
 
 .card-img {
-	margin: 0 auto;
-	border-radius: 50%;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+	transition: transform 350ms ease-in;
+}
+
+.card:hover .card-img {
+	transform: scale(1.15);
+}
+
+/* Facts Section Styles */
+.facts-section {
+	/* text-align: start; */
+	color: white;
+	background-color: #023047;
+}
+
+.facts-section h2 {
+	text-align: center;
+	font-size: 32px;
+}
+
+.facts-section ul {
+	padding: 0;
+	list-style-type: none;
+}
+
+.facts-section li {
+	font-size: 1.125rem;
+	color: hsla(0, 0%, 100%, 0.85);
+}
+
+.facts-section li + li {
+	margin-top: 25px;
 }
 
 /* Guide Section Styles */
-.guide-section {
-	padding: 50px 0;
-}
-
 .guide-card {
 	margin: 0 auto;
 	padding: 23px 12px;
-	max-width: 400px;
+	max-width: 450px;
 	border-radius: 10px;
-	background-color: #a8dadc;
+	background-color: hsl(43, 100%, 71%);
 	justify-content: space-between;
-	box-shadow: 0px 6px 0px #1d3557;
+	box-shadow: 0px 6px 0px #ffb703;
 }
 
 .guide-card > * {
 	width: 100%;
 }
 
-.guide-card-body p {
-	font-style: italic;
+.guide-card img {
+	border-radius: 10px;
 }
 
-.guide-card-body h2,
-.guide-card-body h3 {
-	color: #1d3557;
+.guide-card h2,
+.guide-card h3 {
+	color: #023047;
+}
+
+.guide-card-body p {
+	font-style: italic;
 }
