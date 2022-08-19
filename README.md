@@ -26,7 +26,7 @@ The following is not required, but they are some stretch goals to take this proj
 
 - [Original Figma Design](https://www.figma.com/file/2QuGfAOcHaZJ6aHXfuamnK/Hometown-Homepage?node-id=0%3A1)
 - [My Figma Design](<https://www.figma.com/file/iKZzVyP8TXAslhKW6j3qUk/Hometown-Homepage-(My-Own-Design)?node-id=0%3A1>)
-- [Live Solution Site](https://www.github.com/zaidmarrie)
+- [Live Solution Site](https://zaidmarrie.github.io/hometown-homepage-solo-project/)
 
 ## My process
 
@@ -39,16 +39,38 @@ The following is not required, but they are some stretch goals to take this proj
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+I haven't learned much with this project as I am already familiar with all the concepts I used in this project. However, the practice has helped me reinforce those concepts. I have also started using utility classes more often and efficiently.
 
-To see how you can add code snippets, see below:
+Some code snippets from this project, see below:
 
 ```html
-<h1>Some HTML code I'm proud of</h1>
+<header class="header flex">
+	<div class="header-container">
+		<h1 class="title">Johannesburg</h1>
+		<p class="subtitle">
+			Johannesburg, also known as the Jozi, Joburg, or “The City of Gold”.
+		</p>
+		<p class="subtitle">
+			Johannesburg is the largest city in South Africa, and is one of the 100
+			largest urban areas in the world.
+		</p>
+	</div>
+</header>
 ```
 
 ```css
-.proud-of-this-css {
-	color: papayawhip;
+/* Utility Classes */
+.capitalize {
+	text-transform: capitalize;
+}
+
+.flex {
+	display: flex;
+	gap: 1rem;
+}
+
+.container {
+	width: min(100% - 2rem, 1200px);
+	margin-inline: auto;
 }
 ```
